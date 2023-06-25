@@ -34,14 +34,14 @@ function App() {
     <>
       <div className="floating-switch">
         <label htmlFor="floating">Stop Floating</label>
-        <label class="switch">
+        <label className="switch">
           <input
             value={isFloating}
             onClick={() => setIsFloating(!isFloating)}
             type="checkbox"
             id="floating"
           />
-          <span class="slider round"></span>
+          <span className="slider round"></span>
         </label>
       </div>
       <Canvas shadows camera={{ fov: 25 }}>
@@ -83,7 +83,7 @@ function App() {
           far={30}
           color="#777"
         />
-        <Environment preset="city" />
+        <Environment path="./hdri/" files="potsdamer_platz_1k.hdr" />
         <OrbitControls
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
